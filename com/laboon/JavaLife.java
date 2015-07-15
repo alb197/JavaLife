@@ -1,5 +1,3 @@
-package com.laboon;
-
 public class JavaLife {
 
 	/**
@@ -52,6 +50,7 @@ public class JavaLife {
 	
 	public static void main(String[] args) {
 		if (args.length != 4) {
+			System.out.println(args.length);
 			System.err.println(getErrMessage());
 			System.exit(1);
 		}

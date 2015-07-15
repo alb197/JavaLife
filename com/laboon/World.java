@@ -1,5 +1,3 @@
-package com.laboon;
-
 import java.util.Random;
 
 public class World {
@@ -115,19 +113,20 @@ public class World {
 	 */
 	
 	public String toString() {
-		String toReturn = "  ";
+		StringBuilder sb = new StringBuilder();
+		sb.append("  ");
 		for (int j= 0; j < _size; j++) {
-			toReturn += String.valueOf(j % 10);
+			sb.append(Integer.toString(j));
 		}
-		toReturn += "\n";
+		sb.append("\n");
 		for (int j = 0; j < _size; j++ ) {
-			toReturn += String.valueOf(j % 10) + " ";
+			sb.append(Integer.toString(j) + " ");
 			for (int k = 0; k < _size; k++) {
-				toReturn += (_world[j][k].getStateRep());
+				sb.append(_world[j][k].getStateRep());
 			}
-			toReturn += "\n";
+			sb.append("\n");
 		}
-		return toReturn;
+		return sb.toString();
 	}
 	
 	/**
